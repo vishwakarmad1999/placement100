@@ -1,3 +1,8 @@
-n, k = map(int, input().split())
+def foo(n, k):
+    if n == 1:
+        return 0
 
-l = list(range(n))
+    return (foo(n - 1, k) + k) % n
+
+n, k = map(int, input().split())
+print(foo(n, k))
